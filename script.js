@@ -49,7 +49,7 @@ function check() {
     else if (game[0] === "X" && game[4] === "X" && game[8] === "X" || game[0] === "O" && game[4] === "O" && game[8] === "O") {
         color([0, 4, 8])
     }
-    else if (game[2] === "X" && game[4] === "X" && game[6] === "X" || game[0] === "O" && game[4] === "O" && game[6] === "O") {
+    else if (game[2] === "X" && game[4] === "X" && game[6] === "X" || game[2] === "O" && game[4] === "O" && game[6] === "O") {
         color([2, 4, 6])
     }
     else if (game[0] != 1 && game[1] != 1 && game[2] != 1 && game[3] != 1 && game[4] != 1 && game[5] != 1 && game[6] != 1 && game[7] != 1 && game[8] != 1) {
