@@ -5,8 +5,7 @@ const game = [
     1, 1, 1,
     1, 1, 1,
 ]
-document.querySelector("button").addEventListener("click", clear)
-
+document.querySelector("button").addEventListener("click", clear)
 window.onload = () => {
     for (idx in game) {
         square[idx].addEventListener("click", gaming)
