@@ -9,17 +9,22 @@ body {
     background-color: black;
     color: white;
 }
+
 .container-game {
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     width: 38vw;
     height: 38vw;
     background-color: black;
     gap: 4px;
+    align-items: center;
 }
-h1{
+
+h1 {
     font-family: 'Oxanium', sans-serif;
 }
+
 .content-game-line-0,
 .content-game-line-1,
 .content-game-line-2 {
@@ -35,20 +40,33 @@ h1{
     height: 100%;
     background: lightblue;
     cursor: pointer;
-    font-size: 9vw
+    font-size: 8vw
 }
 
 .animation {
     animation: win 0.5s infinite linear;
 }
 
+button {
+    width: 20%;
+    outline: none;
+    border: none;
+    background-color: rgb(2, 115, 152);
+    color: white;
+    font-weight: 600;
+    border: 1px inset white;
+    cursor: pointer;
+    padding: 1%;
+    font-size: 1vw;
+}
+
 @keyframes win {
     from {
-        background: linear-gradient(lightblue, white);
+        background: white;
     }
 
     to {
-        background: rgb(16, 147, 16);
+        background: rgb(8, 232, 27);
     }
 }
 
@@ -60,5 +78,10 @@ h1{
 
     .content-game {
         font-size: 18vw;
+    }
+
+    button {
+        width: 30%;
+        font-size: 2vw;
     }
 }

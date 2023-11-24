@@ -1,10 +1,12 @@
 const square = document.querySelectorAll(".content-game")
-let counter = 0
+let counter = 0
+let click;
 const game = [
     1, 1, 1,
     1, 1, 1,
     1, 1, 1,
 ]
+document.querySelector("button").addEventListener("click", clear)
 
 window.onload = () => {
     for (idx in game) {
@@ -55,6 +57,7 @@ function check() {
     else if (game[0] != 1 && game[1] != 1 && game[2] != 1 && game[3] != 1 && game[4] != 1 && game[5] != 1 && game[6] != 1 && game[7] != 1 && game[8] != 1) {
         setTimeout(() => {
             alert("DEU VELHA !")
+            clear()
         }, 200)
     }
 }
@@ -63,4 +66,16 @@ function color(value) {
     value.map(data => {
         square[data].classList.add("animation")
     })
+    for (idx in game) {
+        square[idx].removeEventListener("click", gaming)
+    }
+}
+
+function clear() {
+    for (idx in game) {
+        game[idx] = 1
+        square[idx].classList.remove("animation")
+        square[idx].innerHTML = ""
+        square[idx].addEventListener("click", gaming)
+    }
 }
