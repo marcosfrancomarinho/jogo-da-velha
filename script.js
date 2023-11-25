@@ -1,6 +1,5 @@
 const square = document.querySelectorAll(".content-game")
 let counter = 0
-let click;
 const game = [
     1, 1, 1,
     1, 1, 1,
