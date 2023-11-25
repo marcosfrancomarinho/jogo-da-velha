@@ -7,22 +7,20 @@ const game = [
     1, 1, 1,
 ]
 document.querySelector("button").addEventListener("click", clear)
-
 window.onload = () => {
     for (idx in game) {
         square[idx].addEventListener("click", gaming)
     }
 }
-
 function gaming() {
     if (counter % 2 == 0) {
-        this.innerHTML = " &#10008;" 	 
+        this.innerHTML = " &#10008;"
         const x = this.dataset.num
         this.removeEventListener("click", gaming)
         game[x] = "X"
         check()
     } else {
-        this.innerHTML ="&#11044;"
+        this.innerHTML = "&#11044;"
         const x = this.dataset.num
         this.removeEventListener("click", gaming)
         game[x] = "O"
@@ -30,7 +28,6 @@ function gaming() {
     }
     counter++
 }
-
 function check() {
     if (game[0] === "X" && game[1] === "X" && game[2] === "X" || game[0] === "O" && game[1] === "O" && game[2] === "O") {
         color([1, 2, 0])
@@ -63,7 +60,6 @@ function check() {
         }, 200)
     }
 }
-
 function color(value) {
     value.map(data => {
         square[data].classList.add("animation")
@@ -72,7 +68,6 @@ function color(value) {
         square[idx].removeEventListener("click", gaming)
     }
 }
-
 function clear() {
     for (idx in game) {
         game[idx] = 1
