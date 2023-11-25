@@ -1,11 +1,13 @@
 const square = document.querySelectorAll(".content-game")
-let counter = 0
+let counter = 0
+let click;
 const game = [
     1, 1, 1,
     1, 1, 1,
     1, 1, 1,
 ]
-document.querySelector("button").addEventListener("click", clear)
+document.querySelector("button").addEventListener("click", clear)
+
 window.onload = () => {
     for (idx in game) {
         square[idx].addEventListener("click", gaming)
@@ -14,13 +16,15 @@ window.onload = () => {
 
 function gaming() {
     if (counter % 2 == 0) {
-        this.innerHTML = "❌"
+        this.innerHTML = " &#10008;" 	 
         const x = this.dataset.num
+        this.removeEventListener("click", gaming)
         game[x] = "X"
         check()
     } else {
-        this.innerHTML = "⚪"
+        this.innerHTML = "&#9210;"
         const x = this.dataset.num
+        this.removeEventListener("click", gaming)
         game[x] = "O"
         check()
     }
