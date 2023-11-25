@@ -16,13 +16,13 @@ window.onload = () => {
 
 function gaming() {
     if (counter % 2 == 0) {
-        this.innerHTML = " &#10008;" 	 
+        this.innerHTML = " &#10008;"
         const x = this.dataset.num
         this.removeEventListener("click", gaming)
         game[x] = "X"
         check()
     } else {
-        this.innerHTML = "&#9210;"
+        this.innerHTML = "&#x23FA;"
         const x = this.dataset.num
         this.removeEventListener("click", gaming)
         game[x] = "O"
