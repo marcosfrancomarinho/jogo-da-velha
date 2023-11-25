@@ -91,15 +91,22 @@ button:hover {
         width: 80vw;
         height: 80vw;
     }
-    h1{
+
+    h1 {
         font-size: 8vw;
     }
+
     .content-game {
         font-size: 18vw;
     }
 
     button {
-        width: 30%;
-        font-size: 2vw;
+        width: 60%;
+        font-size: 3vw;
+    }
+
+    button:active {
+        background-color: white;
+        color: black;
     }
 }
